@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ ! -f ~/.config/login-sound.conf ]; then
+  cp /etc/login-sound.conf ~/.config/login-sound.conf
+fi
+source ~/.config/login-sound.conf
+mpg123 /usr/share/sounds/login/$LOGIN_SOUND.mp3 > /dev/null 2>&1 &
